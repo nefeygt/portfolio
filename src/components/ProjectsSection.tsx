@@ -1,35 +1,54 @@
-import { ExternalLink, Folder, Github } from "lucide-react";
+import {
+  ExternalLink,
+  Folder,
+  Gamepad2,
+  Github,
+  Code,
+  Globe,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const projects = [
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  technologies: string[];
+  icon: LucideIcon;
+  featured?: boolean;
+  github?: string;
+  live?: string;
+}
+
+const projects: Project[] = [
   {
-    title: "CloudSync Dashboard",
+    title: "Waio",
+    subtitle: "2D Pixel Art Platformer Game",
     description:
-      "Real-time cloud infrastructure monitoring dashboard with interactive graphs, alerting, and team collaboration features.",
-    technologies: ["Next.js", "TypeScript", "D3.js", "WebSocket"],
-    github: "https://github.com",
-    live: "https://example.com",
+      "Developed all game mechanics (player controls, physics interactions, level design) using object-oriented programming principles in C#. Configured Physics 2D settings for character movement, gravity, and collision detection. Optimized game performance and implemented a responsive user interface. Managed the entire Google Play Store publishing pipeline.",
+    technologies: ["Unity", "C#", "OOP", "Physics 2D"],
+    icon: Gamepad2,
+    featured: true,
+    github: "https://github.com/nefeygt",
+    live: "#",
   },
   {
-    title: "DevFlow CLI",
+    title: "TaskBoard Pro",
+    subtitle: "Full-Stack Project Management App",
     description:
-      "A developer productivity CLI tool that automates repetitive tasks like scaffolding, linting, and deployment pipelines.",
-    technologies: ["Node.js", "Commander.js", "Shell"],
-    github: "https://github.com",
+      "A Kanban-style task management application with real-time collaborative boards, drag-and-drop functionality, and team workspaces. Features JWT authentication and role-based access control.",
+    technologies: ["React", "Node.js", "PostgreSQL", "Socket.io"],
+    icon: Code,
+    github: "https://github.com/nefeygt",
   },
   {
-    title: "Marketplace API",
+    title: "TravelLog",
+    subtitle: "Interactive Travel Journal",
     description:
-      "High-performance REST API for an online marketplace with full-text search, payment integration, and role-based auth.",
-    technologies: ["Go", "PostgreSQL", "Redis", "Docker"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "DesignKit UI",
-    description:
-      "An accessible, themeable component library built for React, with full Storybook documentation and CI/CD publishing.",
-    technologies: ["React", "Storybook", "Radix UI", "CSS Modules"],
-    github: "https://github.com",
+      "A responsive web application for documenting and sharing travel experiences with interactive maps, photo galleries, and a rich text editor for writing journal entries.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Mapbox"],
+    icon: Globe,
+    github: "https://github.com/nefeygt",
+    live: "#",
   },
 ];
 
@@ -42,67 +61,86 @@ export default function ProjectsSection() {
           <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((project, i) => (
-            <article
-              key={i}
-              className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:border-accent/40"
-            >
-              <div className="mb-4 flex items-start justify-between">
-                <Folder
-                  size={28}
-                  className="text-accent"
-                  strokeWidth={1.5}
-                />
-                <div className="flex gap-3">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} source code`}
-                      className="text-muted transition-colors hover:text-foreground"
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, i) => {
+            const Icon = project.icon;
+            return (
+              <article
+                key={i}
+                className={`group flex flex-col rounded-xl border bg-card p-6 transition-all duration-300 hover:shadow-[0_0_24px_rgba(59,130,246,0.08)] ${
+                  project.featured
+                    ? "border-accent/30 sm:col-span-2 lg:col-span-1"
+                    : "border-border hover:border-accent/40"
+                }`}
+              >
+                <div className="mb-4 flex items-start justify-between">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`rounded-lg p-2 ${
+                        project.featured
+                          ? "bg-accent/10 text-accent"
+                          : "bg-border/30 text-muted group-hover:text-accent"
+                      } transition-colors`}
                     >
-                      <Github size={18} />
-                    </a>
-                  )}
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} live demo`}
-                      className="text-muted transition-colors hover:text-foreground"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  )}
+                      <Icon size={22} strokeWidth={1.5} />
+                    </div>
+                    {project.featured && (
+                      <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-accent uppercase">
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex gap-3">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} source code`}
+                        className="text-muted transition-colors hover:text-foreground"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                        className="text-muted transition-colors hover:text-foreground"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-accent">
-                {project.title}
-              </h3>
+                <h3 className="mb-1 text-lg font-semibold transition-colors group-hover:text-accent">
+                  {project.title}
+                </h3>
 
-              <p className="mb-6 flex-1 text-sm leading-relaxed text-muted">
-                {project.description}
-              </p>
+                <p className="mb-3 text-xs font-medium text-accent/70">
+                  {project.subtitle}
+                </p>
 
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs font-mono text-muted"
-                  >
-                    {tech}
-                    {tech !==
-                      project.technologies[project.technologies.length - 1] &&
-                      " ·"}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-muted">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-border px-3 py-1 text-xs text-muted transition-colors group-hover:border-accent/30 group-hover:text-foreground"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
