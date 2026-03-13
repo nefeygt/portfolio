@@ -74,7 +74,7 @@ export default function HeroSection() {
             View Projects
           </a>
           <a
-            href="/cv.pdf"
+            href="/Nazim_Efe_Yigit_CV.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-muted transition-colors hover:border-accent hover:text-accent"
           >
