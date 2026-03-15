@@ -29,8 +29,8 @@ const projects: Project[] = [
     technologies: ["Unity", "C#", "OOP", "Physics 2D"],
     icon: Gamepad2,
     featured: true,
-    github: "https://github.com/nefeygt",
-    live: "#",
+    github: "https://github.com/nefeygt/waio",
+    live: "https://nefeygt.itch.io/waio",
   },
   {
     title: "TaskBoard Pro",
