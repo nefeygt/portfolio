@@ -100,7 +100,7 @@ export default function HeroSection() {
             <Github size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/nazımefeyiğit"
+            href="https://linkedin.com/in/nefeygt/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

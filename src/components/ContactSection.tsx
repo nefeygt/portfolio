@@ -11,13 +11,6 @@ export default function ContactSection() {
           Let&apos;s build something great together.
         </h2>
 
-        <a
-          href="mailto:n.efeyigit@outlook.com"
-          className="text-sm text-accent transition-colors hover:text-accent-hover"
-        >
-          n.efeyigit@outlook.com
-        </a>
-
         <div className="mt-6 flex items-center justify-center gap-5">
           <a
             href="https://github.com/nefeygt"
@@ -29,7 +22,7 @@ export default function ContactSection() {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/nazımefeyiğit"
+            href="https://linkedin.com/in/nefeygt/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
