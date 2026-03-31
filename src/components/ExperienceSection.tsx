@@ -21,6 +21,11 @@ const experiences = [
     period: "04/2025 — 05/2025",
     bullets: [
       "Learned the fundamentals of software testing and its role in the SDLC.",
+      //"Explored the test process and the importance of static testing.",
+      //"Applied black-box and white-box test techniques",
+      //"Understood the basics of test management and related tools",
+      //"Got introduced to test automation frameworks and practices",
+      //"Worked on CI/CD integration, performance, and security testing",
     ],
     technologies: ["Software Testing", "SDLC"],
   },
@@ -31,7 +36,7 @@ const experiences = [
     bullets: [
       "Developed an automated mail sending project using ASP.NET framework.",
       "Worked on databases with PostgreSQL and pgAdmin4.",
-      "Worked on Linux systems to build and deploy IoT projects.",
+      "Worked on Linux systems to build and deploy IoT projects, such as Thingsboard.",
     ],
     technologies: ["ASP.NET", "PostgreSQL", "Linux", "IoT"],
   },
