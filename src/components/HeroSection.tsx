@@ -23,7 +23,7 @@ export default function HeroSection() {
           animate="visible"
           custom={0}
         >
-          Software Developer
+          System Analyst & ERP Project Specialist
         </motion.p>
 
         <motion.h1
@@ -43,7 +43,7 @@ export default function HeroSection() {
           animate="visible"
           custom={2}
         >
-          Bilkent University CTIS Senior Student.
+          Bilkent University CTIS Graduate
         </motion.p>
 
         <motion.p
@@ -56,7 +56,9 @@ export default function HeroSection() {
           I am a software developer with a versatile background spanning
           full-stack web development, software testing, and game development. I
           specialize in turning complex problems into scalable, efficient
-          solutions using modern technologies.
+          solutions using modern technologies. I currently work as an ERP
+          Project Specialist at Atiker Yazılım, leveraging modern software
+          architecture expertise to propose long term product improvements.
         </motion.p>
 
         {/* CTA buttons */}

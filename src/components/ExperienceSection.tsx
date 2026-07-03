@@ -2,8 +2,20 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    role: "System Analyst & ERP Project Specialist",
+    company: "Atiker Yazılım",
+    period: "07/2026 — Present",
+    bullets: [
+      "Spearheading the end-to-end setup, customization, and deployment of ERP and B2B SaaS solutions for large scale manufacturing clients.",
+      "Conducting on-site field analysis at factory floors to translate complex operational bottlenecks (BOM management, inventory tracking) into actionable database modules and software features.",
+      "Optimizing legacy business logic within extensive MS SQL Server environments through advanced stored procedures, triggers, and performance tuning techniques.",
+      "Acting as a technical liaison between clients and the internal development team, leveraging modern software architecture expertise to propose long term product improvements.",
+    ],
+    technologies: ["ERP", "B2B SaaS", "MS SQL Server", "Software Architecture"],
+  },
+  {
     role: "Software Developer",
-    company: "Insider",
+    company: "Insider One",
     period: "08/2025 — 01/2026",
     bullets: [
       "Developed solutions/algorithms for global companies.",

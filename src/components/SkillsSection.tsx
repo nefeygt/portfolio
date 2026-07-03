@@ -3,25 +3,27 @@
 const skillGroups = [
   {
     title: "Programming Languages",
-    skills: ["C#", "Java", "JavaScript", "HTML/CSS", "Python", "C", "R"],
+    skills: ["JavaScript", "TypeScript", "HTML/CSS", "C#", "Python", "Java", "C", "R"],
   },
   {
-    title: "Frameworks",
-    skills: [".NET", "Django", "FastAPI", "jQuery"],
+    title: "Frameworks & Libraries",
+    skills: ["Next.js", "Tailwind CSS", ".NET", "Django", "FastAPI", "jQuery"],
   },
   {
     title: "Data Management",
-    skills: ["MySQL", "Oracle", "PostgreSQL"],
+    skills: ["MSSQL Server", "PostgreSQL", "Supabase", "MySQL", "Oracle", "Azure"],
   },
   {
     title: "Tools & Networking",
-    skills: ["Unity", "Git", "Jira", "AWS", "CCNA 1", "CCNA 2"],
+    skills: ["Git", "Jira", "Confluence", "AWS", "SSMS", "Packet Tracer", "CCNA 1", "CCNA 2"],
   },
   {
     title: "Know-how",
     skills: [
+      "ERP",
       "Object-Oriented Programming",
       "API Integration",
+      "Software Architecture",
       "Linux Systems",
       "UI/UX Design",
       "Game Development",
